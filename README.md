@@ -90,12 +90,12 @@ data = yf.download(ticker, start="2010-01-01", end="2024-12-31")
 ```
 
 Output
-![first_data prevw]()
+![first_data prevw](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/first_data_preview.png)
 
 ```python
 data
 ```
-![sec_data_prvw]()
+![sec_data_prvw](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/second_preview.png)
 
 **Resetting Index**
 
@@ -184,7 +184,7 @@ data = data.dropna()
 print(data.head())
 ```
 Output
-![RSI]()
+![RSI](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/RSI.png)
 
 ## Exploratory Data Analysis
 
@@ -211,7 +211,7 @@ plt.legend()
 plt.show()
 ```
 Output
-![Trends]()
+![Trends](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/trends.png)
 
 ### Correlation between Different Features
 ```python
@@ -223,7 +223,7 @@ plt.show()
 ```
 
 Output
-![Heatmap]()
+![Heatmap](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/heatmap.png)
 
 ### Decomposition of the Time Series
 
@@ -259,7 +259,7 @@ plt.show()
 ```
 
 Output
-![Decompose]()
+![Decompose](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/decompose.png)
 
 ### Daily Returns Distribution
 
@@ -274,7 +274,7 @@ plt.show()
 The ADF Statistic
 ```
 Output
-![histogram]()
+![histogram](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/histogram.png)
 
 ### The ADF Statistic
 
@@ -296,7 +296,7 @@ adf_test(data['Close'])
 ```
 
 Output
-![adf]()
+![adf](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/adf.png)
 
 ### Transforming the Data
 
@@ -313,7 +313,7 @@ print(f"ADF Statistic: {result[0]}")
 print(f"p-value: {result[1]}")
 ```
 Output
-![adf2]()
+![adf2](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/adf2.png)
 
 ## Train - Test Split
 
@@ -342,14 +342,14 @@ print(f"Train data size: {len(train)}")
 print(f"Test data size: {len(test)}")
 ```
 Output
-![split]()
+![split](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/split.png)
 
 ```python
 train
 ```
 
 Output
-![train_dataprvw]()
+![train_dataprvw](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/train_data_prevw.png)
 
 ### Preparing the Training and Testing Series
 
@@ -380,7 +380,7 @@ plt.legend()
 plt.show()
 ```
 OutPut
-![differenced_data]()
+![differenced_data](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/dfferenced_data.png)
 
 ```python
 from statsmodels.tsa.arima.model import ARIMA
@@ -421,7 +421,7 @@ plt.ylabel("Close Price")
 plt.legend()
 plt.show()
 ```
-![model_forecast]()
+![model_forecast](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/model_forecast.png)
 
 ### Hyperparameter Tuning
 
@@ -458,7 +458,7 @@ print(f"Best Parameters: {best_params} with MSE: {best_score}")
 ```
 
 Ouput
-![Hyper]()
+![Hyper](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/hyper.png)
 
 ### Regression with Random Forest
 
@@ -505,7 +505,7 @@ rf_r2 = r2_score(y_test, rf_predictions)
 print(f"Random Forest Performance Metrics:\n  RMSE: {rf_rmse:.4f}\n  MAE: {rf_mae:.4f}\n  R²: {rf_r2:.4f}")
 ```
 Output
-![rsme_r2]()
+![rsme_r2](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/randomf_trained_rsme_r2.png)
 
 ### Plotting Actual vs Predicted Trends
 
@@ -521,6 +521,7 @@ plt.legend()
 plt.show()
 ```
 
+![Actual vs Predicted](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/actual_vs_pred.png)
 **Evaluating the Performance of my model in terms of percentage**
 ```python
 from sklearn.metrics import r2_score
@@ -534,7 +535,7 @@ r2_percentage = r2 * 100
 print(f"R² Score: {r2:.2f}")
 print(f"Model explains {r2_percentage:.2f}% of the variance in the target variable.")
 ```
-![Pred_in%]()
+![Pred_in%](https://github.com/SammieBarasa77/stock_analysis/blob/main/assets/images/r2_percent.png)
 
 The R² Score of 0.93 indicates that your Random Forest regression model explains 92.96% of the variance in the target variable. This is an excellent result and demonstrates that your model captures most of the patterns in the data.
 
